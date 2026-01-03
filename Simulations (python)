@@ -1,0 +1,182 @@
+# DAY 1: THE RANDOM WALK - UPDATED VERSION
+print("=== RATIONAL INVESTOR TOOLKIT - DAY 1 ===")
+
+# Set matplotlib backend FIRST
+import matplotlib
+matplotlib.use('Agg')  # Use non-interactive backend for now
+# If this fails, try 'TkAgg' instead of 'Agg'
+
+import random
+import matplotlib.pyplot as plt
+import numpy as np
+
+print("Libraries imported successfully!")
+print(f"Matplotlib version: {matplotlib.__version__}")
+print(f"Numpy version: {np.__version__}")
+
+# Simulate random trades
+trades = 50  # Smaller for faster test
+profits = []
+current = 10000  # Start with $10,000
+
+print("\nGenerating random walk...")
+for i in range(trades):
+    # 55% chance of 2% gain, 45% chance of 1.5% loss
+    if random.random() < 0.55:
+        current = current * 1.02  # Win 2%
+        outcome = "WIN"
+    else:
+        current = current * 0.985  # Lose 1.5%
+        outcome = "LOSS"
+    profits.append(current)
+    if i < 5:  # S
+    how first 5 trades
+        print(f"  Trade {i+1}: {outcome} -> ${current:.2f}")
+
+# Plot results
+print("\nCreating plot...")
+plt.figure(figsize=(10, 5))
+plt.plot(profits, linewidth=2, color='blue')
+plt.title(f"Random Trading Simulation\nStarted: $10,000 | Final: ${profits[-1]:.2f}")
+plt.xlabel("Trade Number")
+plt.ylabel("Portfolio Value ($)")
+plt.grid(True, alpha=0.3)
+
+# Save the plot to a file instead of showing it
+filename = "first_plot.png"
+import os
+print(f"Saving to: {os.path.abspath(filename)}")
+plt.savefig(filename, dpi=100)
+plt.close()  # Important: close the figure
+
+print(f"\n=== SUCCESS ===")
+print(f"Plot saved as '{filename}'")
+print(f"Check your project folder for the image!")
+print(f"Final portfolio value: ${profits[-1]:.2f}")
+print("\nPhilosophical question: If this were a real fund manager's track record,")
+print("how would you determine if it was skill or luck?")
+
+
+
+# THE ALTERNATIVE HISTORIES SIMULATOR
+# (Inspired by Taleb's Chapter 1)
+
+import random
+import matplotlib.pyplot as plt
+import numpy as np
+
+print("=== ALTERNATIVE HISTORIES ===")
+print("Running 20 different parallel universes...")
+
+initial = 10000
+histories = []
+final_values = []
+
+for universe in range(20):
+    capital = initial
+    history = [capital]
+    
+    for day in range(252):  # One trading year
+        # Same random process each universe
+        if random.random() < 0.55:
+            capital *= 1.02
+        else:
+            capital *= 0.985
+        history.append(capital)
+    
+    histories.append(history)
+    final_values.append(capital)
+    
+    # Print extreme outcomes
+    if universe == 0 or universe == 19:
+        return_pct = (capital - initial) / initial * 100
+        print(f"Universe {universe+1}: ${capital:.2f} ({return_pct:+.1f}%)")
+
+# Plot all alternative histories
+plt.figure(figsize=(12, 7))
+for i, history in enumerate(histories):
+    plt.plot(history, alpha=0.4, linewidth=0.8)
+
+g_path = np.mean(histories, axis=0)
+plt.plot(avg_path, 'k-', linewidth=3, label='Average Path', alpha=0.8)
+
+plt.axhline(y=initial, color='red', linestyle='--', label='Starting Capital')
+plt.title("20 Alternative Histories\nSame Process, Wildly Different Outcomes")
+plt.xlabel("Trading Day")
+plt.ylabel("Portfolio Value ($)")
+plt.legend()
+plt.grid(True, alpha=0.3)
+
+plt.savefig("alternative_histories.png", dpi=120)
+plt.close()
+
+print(f"\n=== TALEB'S POINT VISUALIZED ===")
+print(f"Best universe: ${max(final_values):.2f}")
+print(f"Worst universe: ${min(final_values):.2f}")
+print(f"Average outcome: ${np.mean(final_values):.2f}")
+print(f"\nQuestion: If you only saw the BEST universe,")
+print("would you attribute it to skill or luck?")
+
+
+
+# Testing Taleb's "Survivorship Bias"
+# What if we only look at the winners?
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+def simulate_fund(initial=10000, days=252):
+    """Simulate one fund manager for a year"""
+    capital = initial
+    for _ in range(days):
+        if np.random.random() < 0.55:  # Same edge for everyone
+            capital *= 1.02
+        else:
+            capital *= 0.985
+    return capital
+
+# Simulate 1000 fund managers
+print("Simulating 1000 fund managers with IDENTICAL skill level...")
+results = []
+for i in range(1000):
+    results.append(simulate_fund())
+    if i % 100 == 0:
+        print(f"  Simulated {i} managers...")
+
+results = np.array(results)
+
+# Survivorship bias: Only look at "winners" (top 10%)
+winners = results[results > 10000]
+top_10_percent = np.percentile(results, 90)
+superstars = results[results >= top_10_percent]
+
+print(f"\n=== SURVIVORSHIP BIAS DEMONSTRATION ===")
+print(f"All 1000 managers had the SAME 55% win probability")
+print(f"Average result: ${results.mean():.2f}")
+print(f"\nIf we only look at WINNERS (>$10,000):")
+print(f"  Number of winners: {len(winners)}")
+print(f"  Their average: ${winners.mean():.2f}")
+print(f"  We'd conclude they're 'skilled'")
+print(f"\nIf we only look at SUPERSTARS (top 10%):")
+print(f"  Number of superstars: {len(superstars)}")
+print(f"  Their average: ${superstars.mean():.2f}")
+print(f"  Threshold to be superstar: ${top_10_percent:.2f}")
+print(f"  We'd write books about their 'genius'")
+
+# Plot the distribution
+plt.figure(figsize=(12, 6))
+plt.hist(results, bins=50, alpha=0.7, edgecolor='black')
+plt.axvline(x=10000, color='red', linestyle='--', label='Break-even')
+plt.axvline(x=top_10_percent, color='gold', linestyle='--', label='Top 10% threshold')
+plt.xlabel("Final Portfolio Value ($)")
+plt.ylabel("Number of Fund Managers")
+plt.title("Survivorship Bias: 1000 Identical Managers, Different Outcomes\n(All have same 55% win probability)")
+plt.legend()
+plt.grid(alpha=0.3)
+
+plt.savefig("survivorship_bias.png", dpi=120)
+plt.close()
+
+print(f"\n=== TALEB'S POINT ===")
+print("We only see the winners (survivors) and attribute their success to skill,")
+print("when in fact they might just be lucky outcomes of the same random process.")
