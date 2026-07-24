@@ -372,29 +372,40 @@
 
     // Small "how it works" note
     main.appendChild(el('p', { class: 'muted-note center mt' },
-      'Shortcuts: Space reveals · 1–4 answer · Enter continues'));
+      'Shortcuts: Space reveals · 1–4 answer · Enter continues · ← back'));
   }
 
   // ---- Quiz ----
-  let session = null; // {items, index, results, mode, phase, selected}
+  // Session model:
+  //   items    — ordered questions for this session
+  //   answers  — answers[i] = {selected, correct}; filled sequentially as you go
+  //   view     — index currently on screen (you can browse back to answered ones)
+  //   phase    — 'recall' | 'answer', only meaningful at the unanswered frontier
+  // Answered questions always render as read-only feedback; going back never re-records.
+  let session = null;
 
   function startSession(mode) {
     const items = mode === 'weekly' ? buildWeeklyReview() : buildSession(state.settings.sessionLength);
     if (!items.length) { render('home'); return; }
-    session = { items, index: 0, results: [], mode, phase: 'recall', selected: null };
+    session = { items, answers: [], view: 0, phase: 'recall', mode };
     render('quiz');
   }
 
+  const answeredCount = () => session.answers.length;
+  const isAnsweredView = () => session.view < answeredCount();
+  const correctSoFar = () => session.answers.filter(a => a.correct).length;
+
   function renderQuiz() {
-    const q = session.items[session.index];
+    const q = session.items[session.view];
     const total = session.items.length;
+    const answered = isAnsweredView();
 
     const wrap = el('div', {});
     wrap.appendChild(el('div', { class: 'quiz-head' },
-      el('span', {}, `${session.mode === 'weekly' ? 'Weekly review · ' : ''}Question ${session.index + 1} of ${total}`),
-      el('span', {}, `${session.results.filter(r => r.correct).length} correct`),
+      el('span', {}, `${session.mode === 'weekly' ? 'Weekly review · ' : ''}Question ${session.view + 1} of ${total}`),
+      el('span', {}, `${correctSoFar()} correct`),
     ));
-    wrap.appendChild(el('div', { class: 'progress' }, el('i', { style: `width:${(session.index / total) * 100}%` })));
+    wrap.appendChild(el('div', { class: 'progress' }, el('i', { style: `width:${(answeredCount() / total) * 100}%` })));
 
     const card = el('div', { class: 'card' });
     const tags = el('div', { class: 'tags' },
@@ -406,28 +417,36 @@
     card.appendChild(tags);
     card.appendChild(el('div', { class: 'qtext' }, q.question));
 
-    if (session.phase === 'recall') {
+    if (answered) {
+      // Read-only view of a question already answered.
+      const a = session.answers[session.view];
+      card.appendChild(renderChoices(q, true, a.selected));
+      card.appendChild(renderFeedback(q, a.selected));
+    } else if (session.phase === 'recall') {
       card.appendChild(el('div', { class: 'recall-hint' }, 'Think of your answer first — then reveal the options.'));
-      card.appendChild(el('button', { class: 'btn', onclick: revealOptions }, 'Reveal options  (Space)'));
-    } else {
-      card.appendChild(renderChoices(q));
-      if (session.phase === 'feedback') card.appendChild(renderFeedback(q));
+      const row = el('div', { class: 'btn-row' });
+      if (session.view > 0) row.appendChild(el('button', { class: 'btn secondary', onclick: goBack }, '← Back'));
+      row.appendChild(el('button', { class: 'btn', onclick: revealOptions }, 'Reveal options  (Space)'));
+      card.appendChild(row);
+    } else { // 'answer'
+      card.appendChild(renderChoices(q, false, null));
+      if (session.view > 0) card.appendChild(el('button', { class: 'btn secondary mt', onclick: goBack }, '← Back'));
     }
     wrap.appendChild(card);
     main.appendChild(wrap);
   }
 
-  function renderChoices(q) {
+  function renderChoices(q, answered, selected) {
     const box = el('div', { class: 'choices' });
     q.choices.forEach((choice, i) => {
       const btn = el('button', { class: 'choice', onclick: () => pickAnswer(i) },
         el('span', { class: 'key' }, String(i + 1)),
         el('span', {}, choice),
       );
-      if (session.phase === 'feedback') {
+      if (answered) {
         btn.disabled = true;
         if (i === q.answerIndex) btn.classList.add('correct');
-        else if (i === session.selected) btn.classList.add('wrong');
+        else if (i === selected) btn.classList.add('wrong');
         else btn.classList.add('muted');
       }
       box.appendChild(btn);
@@ -435,51 +454,58 @@
     return box;
   }
 
-  function renderFeedback(q) {
-    const correct = session.selected === q.answerIndex;
+  function renderFeedback(q, selected) {
+    const correct = selected === q.answerIndex;
     const fb = el('div', { class: 'feedback' });
     fb.appendChild(el('div', { class: `verdict ${correct ? 'correct' : 'wrong'}` },
       correct ? '✓ Correct' : '✗ Not quite'));
     fb.appendChild(el('div', { class: 'fb-block' },
       el('div', { class: 'k' }, 'Why'), el('div', { class: 'v' }, q.explanation)));
+    if (q.context) fb.appendChild(el('div', { class: 'fb-block context' },
+      el('div', { class: 'k' }, 'Context'), el('div', { class: 'v' }, q.context)));
     if (q.distractorNotes) fb.appendChild(el('div', { class: 'fb-block distractor' },
       el('div', { class: 'k' }, 'Watch out'), el('div', { class: 'v' }, q.distractorNotes)));
     if (q.connection) fb.appendChild(el('div', { class: 'fb-block connection' },
       el('div', { class: 'k' }, 'Connection'), el('div', { class: 'v' }, q.connection)));
 
-    const isLast = session.index === session.items.length - 1;
-    fb.appendChild(el('button', { class: 'btn mt', onclick: nextQuestion },
+    const isLast = session.view === session.items.length - 1;
+    const row = el('div', { class: 'btn-row mt' });
+    if (session.view > 0) row.appendChild(el('button', { class: 'btn secondary', onclick: goBack }, '← Back'));
+    row.appendChild(el('button', { class: 'btn', onclick: goForward },
       isLast ? 'Finish session  (Enter)' : 'Continue  (Enter)'));
+    fb.appendChild(row);
     return fb;
   }
 
   function revealOptions() {
-    if (session.phase !== 'recall') return;
+    if (isAnsweredView() || session.phase !== 'recall') return;
     session.phase = 'answer';
     renderCurrent();
   }
   function pickAnswer(i) {
-    if (session.phase !== 'answer') return;
-    session.selected = i;
-    session.phase = 'feedback';
-    const q = session.items[session.index];
+    if (isAnsweredView() || session.phase !== 'answer') return;
+    const q = session.items[session.view];
     const correct = i === q.answerIndex;
     recordAnswer(q, correct, { noStats: false });
-    session.results.push({ q, correct });
+    session.answers.push({ selected: i, correct }); // now this view becomes answered
+    session.phase = 'recall';                        // prime the next frontier
     save();
     renderCurrent();
   }
-  function nextQuestion() {
-    if (session.phase !== 'feedback') return;
-    if (session.index < session.items.length - 1) {
-      session.index += 1;
-      session.phase = 'recall';
-      session.selected = null;
+  function goBack() {
+    if (session.view > 0) { session.view -= 1; renderCurrent(); }
+  }
+  function goForward() {
+    if (!isAnsweredView()) return; // only advance from an answered question
+    if (session.view < session.items.length - 1) {
+      session.view += 1;
       renderCurrent();
     } else {
+      // Last question answered → finish.
       if (session.mode === 'weekly') { state.weeklyReview.lastRun = todayStr(); }
-      completeSession(session.results);
-      render('summary', { results: session.results, mode: session.mode });
+      const results = session.items.map((q, i) => ({ q, correct: session.answers[i].correct }));
+      completeSession(results);
+      render('summary', { results, mode: session.mode });
     }
   }
   function renderCurrent() { main.innerHTML = ''; renderQuiz(); }
@@ -762,13 +788,15 @@
   document.addEventListener('keydown', (e) => {
     if (current.view !== 'quiz' || !session) return;
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-    if (e.key === ' ' && session.phase === 'recall') { e.preventDefault(); revealOptions(); }
-    else if (session.phase === 'answer' && ['1', '2', '3', '4'].includes(e.key)) {
+    const answered = isAnsweredView();
+    if (e.key === 'ArrowLeft') { e.preventDefault(); goBack(); }
+    else if (!answered && e.key === ' ' && session.phase === 'recall') { e.preventDefault(); revealOptions(); }
+    else if (!answered && session.phase === 'answer' && ['1', '2', '3', '4'].includes(e.key)) {
       const i = parseInt(e.key, 10) - 1;
-      const q = session.items[session.index];
+      const q = session.items[session.view];
       if (i < q.choices.length) { e.preventDefault(); pickAnswer(i); }
     }
-    else if (e.key === 'Enter' && session.phase === 'feedback') { e.preventDefault(); nextQuestion(); }
+    else if (answered && (e.key === 'Enter' || e.key === 'ArrowRight')) { e.preventDefault(); goForward(); }
   });
 
   // ---------------------------------------------------------------------------

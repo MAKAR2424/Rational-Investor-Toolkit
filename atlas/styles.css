@@ -179,6 +179,8 @@ p { margin: 0 0 12px; }
 .fb-block .v { color: var(--text); }
 .fb-block.connection .v { color: var(--accent-2); }
 .fb-block.distractor .v { color: var(--text-dim); }
+.fb-block.context { border-left: 2px solid var(--border); padding-left: 12px; }
+.fb-block.context .v { color: var(--text-dim); }
 
 /* Summary */
 .score-hero { text-align: center; padding: 10px 0 20px; }

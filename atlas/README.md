@@ -64,10 +64,14 @@ Because there's no backend, progress on your phone is separate from your desktop
 - Once a week, if you've missed questions, a **Weekly review** banner appears on Home — a short
   session drawn only from what you got wrong in the last 7 days.
 
+You can also press **← Back** at any point to revisit earlier questions in the session (read-only —
+your recorded answer and stats don't change), then jump forward again.
+
 ### Keyboard shortcuts
 - **Space** — reveal the options
 - **1–4** — select an answer
-- **Enter** — continue to the next question
+- **Enter** or **→** — continue to the next question
+- **←** — go back to the previous question
 
 ---
 
@@ -125,6 +129,7 @@ causal links, and influence chains).
   "choices": ["A royal palace", "A tomb for a pharaoh", "A grain storehouse", "An observatory"],
   "answerIndex": 1,
   "explanation": "The Great Pyramid was built around 2560 BCE as a monumental tomb for Khufu.",
+  "context": "Built c. 2560 BCE at Giza for the pharaoh Khufu; it was the tallest human-made structure on Earth for nearly 4,000 years.",
   "distractorNotes": "It aligns to cardinal directions, but 'observatory' is a modern myth.",
   "connection": "Part of the same Old Kingdom pyramid-building tradition centered on Memphis.",
   "connect": true,
@@ -144,6 +149,7 @@ causal links, and influence chains).
 | `choices` | ✅ | Array of **exactly 4** distinct strings. |
 | `answerIndex` | ✅ | Integer `0–3` — the index of the correct choice. |
 | `explanation` | ✅ | 1–2 punchy sentences on *why* the answer is right. |
+| `context` | optional | 1–3 sentences of grounding facts shown as "Context" in feedback — dates and place for events, who a person is and their lifespan, what a term means. All starter questions include one. |
 | `distractorNotes` | ✅ | Short note on why the most tempting wrong answer is wrong. |
 | `connection` | optional | One sentence linking the fact to another idea/era/person. Shown as "Connection" in feedback. |
 | `connect` | optional | `true` marks a "connect the dots" question (adds a chip and boosts it in the recap). Use for ordering / causal / influence questions. |
