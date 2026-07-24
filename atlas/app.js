@@ -10,7 +10,7 @@
   // Constants
   // ---------------------------------------------------------------------------
   const STORE_KEY = 'atlas.state.v1';
-  const TOPICS = ['History', 'Geography', 'Philosophy'];
+  const TOPICS = ['History', 'Geography', 'Philosophy', 'Economics'];
   // Recovering interval ladder (days) after a wrong answer: wrong=1, then 3,7,16,35.
   const SR_LADDER = [1, 3, 7, 16, 35];
   const FIRST_TIME_INTERVAL = 14; // correct on first ever sighting -> long interval

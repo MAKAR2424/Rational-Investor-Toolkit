@@ -5757,5 +5757,1627 @@ window.ATLAS_QUESTIONS = [
       "p091",
       "h006"
     ]
+  },
+  {
+    "id": "e001",
+    "topic": "Economics",
+    "subtopic": "Economic Thought",
+    "difficulty": "easy",
+    "question": "Adam Smith's pin-factory example shows that the division of labor mainly leads to what?",
+    "choices": [
+      "Higher unemployment",
+      "A large rise in productivity",
+      "Lower product quality",
+      "Government control of industry"
+    ],
+    "answerIndex": 1,
+    "explanation": "Splitting work into specialized steps lets each worker get faster and more skilled, so output per worker multiplies far beyond one person doing every task.",
+    "context": "Adam Smith (1723–1790) opened The Wealth of Nations (1776) with the pin-factory example.",
+    "distractorNotes": "Specialization can make tasks monotonous, but the headline effect is a productivity jump, not lower quality.",
+    "connection": "Higher productivity from specialization is the root of gains from trade and long-run growth.",
+    "connect": true,
+    "related": [
+      "e002",
+      "e046"
+    ]
+  },
+  {
+    "id": "e002",
+    "topic": "Economics",
+    "subtopic": "Trade",
+    "difficulty": "medium",
+    "question": "Specialization in production naturally leads to what?",
+    "choices": [
+      "Greater self-sufficiency",
+      "A greater need for exchange and trade",
+      "Slower economic growth",
+      "Lower productivity"
+    ],
+    "answerIndex": 1,
+    "explanation": "If each person or nation specializes, they stop making everything they need and must trade for the rest — specialization and exchange reinforce each other.",
+    "context": "This links Smith's division of labor to the broader case for markets and trade.",
+    "distractorNotes": "Specialization reduces self-sufficiency; it doesn't increase it.",
+    "connection": "Ricardo extended this logic to whole nations through comparative advantage.",
+    "connect": true,
+    "related": [
+      "e001",
+      "e003"
+    ]
+  },
+  {
+    "id": "e003",
+    "topic": "Economics",
+    "subtopic": "Trade",
+    "difficulty": "medium",
+    "question": "David Ricardo's comparative advantage shows two countries can both gain from trade when each specializes where it has the lower what?",
+    "choices": [
+      "Wage rate",
+      "Opportunity cost",
+      "Tax rate",
+      "Tariff"
+    ],
+    "answerIndex": 1,
+    "explanation": "Even if one country is better at making everything, both gain when each focuses on what it sacrifices least to produce and trades for the rest.",
+    "context": "David Ricardo (1772–1823) formalized comparative advantage in 1817.",
+    "distractorNotes": "It hinges on opportunity cost, not on who has lower absolute wages or costs.",
+    "connection": "This is the theoretical backbone of the case for free trade.",
+    "connect": true,
+    "related": [
+      "e004",
+      "e051"
+    ]
+  },
+  {
+    "id": "e004",
+    "topic": "Economics",
+    "subtopic": "Microeconomics",
+    "difficulty": "easy",
+    "question": "The opportunity cost of a choice is best described as what?",
+    "choices": [
+      "The money spent on it",
+      "The value of the next-best alternative given up",
+      "The total budget available",
+      "A government tax"
+    ],
+    "answerIndex": 1,
+    "explanation": "Because resources are scarce, choosing one option means forgoing another; its true cost is the best thing you sacrificed.",
+    "context": "Opportunity cost is one of the most foundational ideas in all of economics.",
+    "distractorNotes": "It's not just the cash spent — it's the value of what you gave up.",
+    "connection": "Comparative advantage is defined entirely in terms of opportunity cost.",
+    "connect": true,
+    "related": [
+      "e003",
+      "e005"
+    ]
+  },
+  {
+    "id": "e005",
+    "topic": "Economics",
+    "subtopic": "Microeconomics",
+    "difficulty": "easy",
+    "question": "Economics is often defined as the study of how societies cope with which fundamental problem?",
+    "choices": [
+      "Scarcity",
+      "Inflation",
+      "Taxation",
+      "Poverty"
+    ],
+    "answerIndex": 0,
+    "explanation": "Because wants exceed limited resources, every society must choose how to allocate them; scarcity forces the trade-offs economics studies.",
+    "context": "Lionel Robbins gave a classic scarcity-based definition of economics in 1932.",
+    "distractorNotes": "Inflation and poverty are topics within economics, not its root problem.",
+    "connection": "Scarcity is the reason opportunity cost exists at all.",
+    "connect": true,
+    "related": [
+      "e004"
+    ]
+  },
+  {
+    "id": "e006",
+    "topic": "Economics",
+    "subtopic": "Microeconomics",
+    "difficulty": "easy",
+    "question": "In a competitive market, the interaction of supply and demand mainly determines what?",
+    "choices": [
+      "The government budget",
+      "The equilibrium price and quantity",
+      "The inflation rate directly",
+      "The unemployment rate"
+    ],
+    "answerIndex": 1,
+    "explanation": "Prices adjust until the quantity buyers want equals the quantity sellers offer; surpluses push prices down and shortages push them up toward equilibrium.",
+    "context": "Alfred Marshall popularized the supply-and-demand diagram in his 1890 Principles.",
+    "distractorNotes": "It sets the market price and quantity, not the government's budget.",
+    "connection": "The resulting price acts as a signal coordinating buyers and sellers."
+  },
+  {
+    "id": "e007",
+    "topic": "Economics",
+    "subtopic": "Economic Thought",
+    "difficulty": "hard",
+    "question": "According to Friedrich Hayek, prices in a market chiefly serve what function?",
+    "choices": [
+      "Punishing consumers",
+      "Conveying information that coordinates dispersed decisions",
+      "Setting government policy",
+      "Eliminating scarcity"
+    ],
+    "answerIndex": 1,
+    "explanation": "No planner knows everyone's needs; a rising price signals scarcity, telling producers to make more and consumers to economize — coordinating millions of choices automatically.",
+    "context": "Hayek (1899–1992) argued this in 'The Use of Knowledge in Society' (1945).",
+    "distractorNotes": "Prices inform and coordinate; they don't abolish scarcity.",
+    "connection": "This is a central argument against central economic planning.",
+    "connect": true,
+    "related": [
+      "e075"
+    ]
+  },
+  {
+    "id": "e008",
+    "topic": "Economics",
+    "subtopic": "Microeconomics",
+    "difficulty": "easy",
+    "question": "If demand for a good rises while supply stays fixed, the most direct result is what?",
+    "choices": [
+      "A lower price",
+      "A higher price",
+      "A government subsidy",
+      "Falling quality"
+    ],
+    "answerIndex": 1,
+    "explanation": "More buyers chasing the same quantity creates a shortage at the old price, bidding it up until supply and demand rebalance.",
+    "context": "This is the basic law of supply and demand in action.",
+    "distractorNotes": "Prices fall when supply outstrips demand — the opposite case.",
+    "connection": "The higher price then signals producers to increase supply.",
+    "related": [
+      "e006"
+    ]
+  },
+  {
+    "id": "e009",
+    "topic": "Economics",
+    "subtopic": "Microeconomics",
+    "difficulty": "medium",
+    "question": "If a good has inelastic demand, raising its price will most likely do what to total revenue?",
+    "choices": [
+      "Increase it",
+      "Decrease it to zero",
+      "Leave the good unsold",
+      "Cause a lasting shortage"
+    ],
+    "answerIndex": 0,
+    "explanation": "Inelastic demand means quantity barely falls when price rises (think necessities), so a higher price times nearly-unchanged quantity raises total revenue.",
+    "context": "Elasticity measures how sensitive quantity demanded is to a price change.",
+    "distractorNotes": "For elastic goods a price hike cuts revenue, but inelastic goods behave oppositely.",
+    "connection": "Governments tax inelastic goods like tobacco to raise steady revenue.",
+    "related": [
+      "e059"
+    ]
+  },
+  {
+    "id": "e010",
+    "topic": "Economics",
+    "subtopic": "Microeconomics",
+    "difficulty": "medium",
+    "question": "The law of diminishing marginal utility helps explain why demand curves generally do what?",
+    "choices": [
+      "Slope downward",
+      "Slope upward",
+      "Stay perfectly vertical",
+      "Disappear"
+    ],
+    "answerIndex": 0,
+    "explanation": "Each extra unit gives less added satisfaction than the last, so people buy more only at a lower price — producing the downward-sloping demand curve.",
+    "context": "This 'marginalist' insight reshaped economics in the 1870s.",
+    "distractorNotes": "Upward-sloping demand is rare and exceptional, not the norm.",
+    "connection": "Marginal analysis is the foundation of modern microeconomics.",
+    "related": [
+      "e052"
+    ]
+  },
+  {
+    "id": "e011",
+    "topic": "Economics",
+    "subtopic": "Microeconomics",
+    "difficulty": "easy",
+    "question": "A central principle of economics is that people predictably respond to what?",
+    "choices": [
+      "Incentives",
+      "Random chance",
+      "Only written laws",
+      "Nothing at all"
+    ],
+    "answerIndex": 0,
+    "explanation": "Change the costs or benefits of an action and behavior shifts; good policy works with incentives, while unintended incentives produce unintended results.",
+    "context": "Economists often summarize rational behavior with the phrase 'incentives matter.'",
+    "distractorNotes": "Behavior isn't random — it responds systematically to incentives.",
+    "connection": "Misaligned incentives are what cause problems like moral hazard.",
+    "connect": true,
+    "related": [
+      "e039"
+    ]
+  },
+  {
+    "id": "e012",
+    "topic": "Economics",
+    "subtopic": "Market Failure",
+    "difficulty": "medium",
+    "question": "The 'tragedy of the commons' predicts that a shared, unowned resource will tend to be what?",
+    "choices": [
+      "Overused and depleted",
+      "Perfectly preserved",
+      "Shared equally forever",
+      "Ignored by everyone"
+    ],
+    "answerIndex": 0,
+    "explanation": "Each user reaps the full benefit of taking more while sharing the cost of depletion with all, so individually rational use adds up to collective ruin.",
+    "context": "Garrett Hardin popularized the phrase in 1968; Elinor Ostrom later showed communities can manage commons well.",
+    "distractorNotes": "Without rules or ownership, self-interest drives overuse, not preservation.",
+    "connection": "It's a classic case of a negative externality.",
+    "connect": true,
+    "related": [
+      "e013",
+      "e041"
+    ]
+  },
+  {
+    "id": "e013",
+    "topic": "Economics",
+    "subtopic": "Market Failure",
+    "difficulty": "medium",
+    "question": "A negative externality, like pollution, tends to make a market do what?",
+    "choices": [
+      "Produce too little of the good",
+      "Produce too much of the good",
+      "Charge nothing at all",
+      "Shut down entirely"
+    ],
+    "answerIndex": 1,
+    "explanation": "When producers don't pay for harm imposed on others, their private costs look artificially low, so the market overproduces the polluting good relative to the social optimum.",
+    "context": "Arthur Pigou analyzed externalities; a corrective tax is called a Pigouvian tax.",
+    "distractorNotes": "Positive externalities cause underproduction; negative ones cause overproduction.",
+    "connection": "This is a standard justification for regulation or corrective taxes.",
+    "connect": true,
+    "related": [
+      "e057",
+      "e070"
+    ]
+  },
+  {
+    "id": "e014",
+    "topic": "Economics",
+    "subtopic": "Market Failure",
+    "difficulty": "medium",
+    "question": "Public goods like national defense are often underprovided by markets because of what problem?",
+    "choices": [
+      "The free-rider problem",
+      "Excessive competition",
+      "High elasticity",
+      "Diminishing returns"
+    ],
+    "answerIndex": 0,
+    "explanation": "Since no one can be excluded and all enjoy the good whether or not they pay, each has an incentive to free-ride, so private firms can't profitably supply enough.",
+    "context": "Public goods are 'non-excludable' and 'non-rival' in consumption.",
+    "distractorNotes": "The issue is non-payment (free-riding), not too much competition.",
+    "connection": "It's a core rationale for government provision funded by taxes.",
+    "connect": true,
+    "related": [
+      "e012"
+    ]
+  },
+  {
+    "id": "e015",
+    "topic": "Economics",
+    "subtopic": "Money and Banking",
+    "difficulty": "medium",
+    "question": "Sustained inflation is generally driven by what, according to the quantity theory of money?",
+    "choices": [
+      "Too little money in circulation",
+      "The money supply growing faster than output",
+      "Lower taxes alone",
+      "Rising exports"
+    ],
+    "answerIndex": 1,
+    "explanation": "When money grows faster than the goods it chases, more currency bids up the same output, so the general price level rises — 'too much money chasing too few goods.'",
+    "context": "Milton Friedman argued inflation is 'always and everywhere a monetary phenomenon.'",
+    "distractorNotes": "Too little money would tend toward deflation, not inflation.",
+    "connection": "Central banks fight inflation by slowing money and credit growth.",
+    "connect": true,
+    "related": [
+      "e016",
+      "e022"
+    ]
+  },
+  {
+    "id": "e016",
+    "topic": "Economics",
+    "subtopic": "Money and Banking",
+    "difficulty": "medium",
+    "question": "Runaway money-printing to fund government spending tends to lead to what?",
+    "choices": [
+      "Stable prices",
+      "Hyperinflation and loss of confidence in the currency",
+      "Gradually falling prices",
+      "Higher real savings"
+    ],
+    "answerIndex": 1,
+    "explanation": "Flooding the economy with new money far outpaces output; prices spiral, people rush to spend before money loses value, and the currency can collapse.",
+    "context": "Weimar Germany's 1923 hyperinflation is the classic example.",
+    "distractorNotes": "Printing money causes rising, not falling, prices.",
+    "connection": "It's the quantity theory of money playing out in the extreme.",
+    "connect": true,
+    "related": [
+      "e015",
+      "e055"
+    ]
+  },
+  {
+    "id": "e017",
+    "topic": "Economics",
+    "subtopic": "Macroeconomics",
+    "difficulty": "medium",
+    "question": "Unemployment caused by workers' skills not matching available jobs is called what?",
+    "choices": [
+      "Structural unemployment",
+      "Frictional unemployment",
+      "Cyclical unemployment",
+      "Seasonal unemployment"
+    ],
+    "answerIndex": 0,
+    "explanation": "Structural unemployment comes from a mismatch of skills or locations with job openings, often due to technological change — and it can persist even in a healthy economy.",
+    "context": "Economists distinguish frictional, structural, and cyclical unemployment.",
+    "distractorNotes": "Cyclical unemployment comes from recessions, not from a skills mismatch.",
+    "connection": "Automation can raise structural unemployment in declining industries."
+  },
+  {
+    "id": "e018",
+    "topic": "Economics",
+    "subtopic": "Macroeconomics",
+    "difficulty": "easy",
+    "question": "Gross Domestic Product (GDP) measures what?",
+    "choices": [
+      "The total money supply",
+      "The market value of all final goods and services a country produces",
+      "The government's total debt",
+      "The stock market's total value"
+    ],
+    "answerIndex": 1,
+    "explanation": "GDP sums the value of final output produced within a country over a period, serving as the standard gauge of an economy's size.",
+    "context": "National GDP accounting was developed by Simon Kuznets in the 1930s.",
+    "distractorNotes": "It's a flow of production, not a stock of money or debt.",
+    "connection": "GDP per person is a rough proxy for average living standards.",
+    "related": [
+      "e046"
+    ]
+  },
+  {
+    "id": "e019",
+    "topic": "Economics",
+    "subtopic": "Macroeconomics",
+    "difficulty": "medium",
+    "question": "A recession is commonly defined as what?",
+    "choices": [
+      "Any fall in the stock market",
+      "A significant, broad decline in economic activity",
+      "A rise in inflation",
+      "A government shutdown"
+    ],
+    "answerIndex": 1,
+    "explanation": "Recessions are the contraction phase of the business cycle: output, employment, and spending fall together and feed on each other until a trough is reached.",
+    "context": "A common rule of thumb is two consecutive quarters of falling GDP.",
+    "distractorNotes": "A stock dip alone isn't a recession — it's about broad real activity.",
+    "connection": "Keynesian policy tries to soften recessions by supporting demand.",
+    "connect": true,
+    "related": [
+      "e020"
+    ]
+  },
+  {
+    "id": "e020",
+    "topic": "Economics",
+    "subtopic": "Fiscal and Monetary Policy",
+    "difficulty": "medium",
+    "question": "John Maynard Keynes argued that in a deep downturn, governments should do what?",
+    "choices": [
+      "Cut all spending",
+      "Boost spending to raise aggregate demand",
+      "Raise interest rates sharply",
+      "Do nothing and wait it out"
+    ],
+    "answerIndex": 1,
+    "explanation": "Keynes held that when private spending collapses, output and jobs fall; government spending can fill the gap, lifting demand back toward full employment.",
+    "context": "Keynes (1883–1946) argued this in The General Theory (1936), responding to the Depression.",
+    "distractorNotes": "Austerity in a slump can deepen it by cutting demand further.",
+    "connection": "This countercyclical idea underpins modern fiscal stimulus.",
+    "connect": true,
+    "related": [
+      "e062",
+      "e063"
+    ]
+  },
+  {
+    "id": "e021",
+    "topic": "Economics",
+    "subtopic": "Fiscal and Monetary Policy",
+    "difficulty": "medium",
+    "question": "Monetary policy, unlike fiscal policy, is primarily conducted by whom?",
+    "choices": [
+      "The legislature through taxes",
+      "A central bank through interest rates and the money supply",
+      "Individual firms",
+      "Foreign governments"
+    ],
+    "answerIndex": 1,
+    "explanation": "Central banks steer the economy by adjusting interest rates and money, while fiscal policy — taxing and spending — is set by the government or legislature.",
+    "context": "In the U.S. the Federal Reserve runs monetary policy; Congress sets fiscal policy.",
+    "distractorNotes": "Taxing and spending is fiscal policy, handled by the legislature.",
+    "connection": "Both are tools for stabilizing the business cycle.",
+    "related": [
+      "e020"
+    ]
+  },
+  {
+    "id": "e022",
+    "topic": "Economics",
+    "subtopic": "Fiscal and Monetary Policy",
+    "difficulty": "medium",
+    "question": "When a central bank lowers interest rates, the intended effect is to do what?",
+    "choices": [
+      "Discourage borrowing",
+      "Encourage borrowing, investment, and spending",
+      "Raise unemployment",
+      "Shrink the economy"
+    ],
+    "answerIndex": 1,
+    "explanation": "Cheaper credit makes loans, investment, and big purchases more attractive, boosting demand and, the bank hopes, growth and employment.",
+    "context": "Lowering rates is a standard tool for stimulating a slowing economy.",
+    "distractorNotes": "Lower rates encourage, not discourage, borrowing.",
+    "connection": "Raising rates does the reverse, to cool inflation.",
+    "connect": true,
+    "related": [
+      "e015",
+      "e069"
+    ]
+  },
+  {
+    "id": "e023",
+    "topic": "Economics",
+    "subtopic": "Money and Banking",
+    "difficulty": "medium",
+    "question": "A key traditional role of a central bank during a banking panic is to act as what?",
+    "choices": [
+      "A lender of last resort",
+      "A tax collector",
+      "A stock broker",
+      "A retail bank for individuals"
+    ],
+    "answerIndex": 0,
+    "explanation": "By lending freely to solvent banks in a crisis, the central bank stops a panic from snowballing into a system-wide collapse.",
+    "context": "Walter Bagehot outlined the 'lender of last resort' role in Lombard Street (1873).",
+    "distractorNotes": "Central banks don't serve individual retail customers directly.",
+    "connection": "This function is meant to prevent bank runs and contagion.",
+    "related": [
+      "e024"
+    ]
+  },
+  {
+    "id": "e024",
+    "topic": "Economics",
+    "subtopic": "Money and Banking",
+    "difficulty": "medium",
+    "question": "Bank runs are possible mainly because banks operate under which system?",
+    "choices": [
+      "Full-reserve banking",
+      "Fractional-reserve banking",
+      "Pure barter",
+      "A gold standard only"
+    ],
+    "answerIndex": 1,
+    "explanation": "Banks lend out most deposits and keep only a fraction on hand, so if many depositors demand cash at once the bank can't pay them all — triggering a run.",
+    "context": "Fractional-reserve banking is the basis of modern banking.",
+    "distractorNotes": "Under full-reserve banking, all deposits are held, so a run couldn't drain reserves this way.",
+    "connection": "Deposit insurance and central banks were created partly to stop runs.",
+    "related": [
+      "e023"
+    ]
+  },
+  {
+    "id": "e025",
+    "topic": "Economics",
+    "subtopic": "Money and Banking",
+    "difficulty": "easy",
+    "question": "Which is NOT one of the three classic functions of money?",
+    "choices": [
+      "Medium of exchange",
+      "Store of value",
+      "Unit of account",
+      "Source of intrinsic happiness"
+    ],
+    "answerIndex": 3,
+    "explanation": "Money works as a medium of exchange, a store of value, and a unit of account; together these let it replace inefficient barter.",
+    "context": "These three functions are what define something as 'money.'",
+    "distractorNotes": "Money's value is instrumental — its real functions are exchange, value storage, and accounting.",
+    "connection": "Money as a medium of exchange solves barter's 'double coincidence of wants.'",
+    "connect": true,
+    "related": [
+      "e026"
+    ]
+  },
+  {
+    "id": "e026",
+    "topic": "Economics",
+    "subtopic": "Money and Banking",
+    "difficulty": "medium",
+    "question": "Money emerged largely to solve which problem of barter?",
+    "choices": [
+      "The double coincidence of wants",
+      "Too much specialization",
+      "Excess saving",
+      "High literacy"
+    ],
+    "answerIndex": 0,
+    "explanation": "In barter you must find someone who both has what you want and wants what you have; money is universally accepted, so any trade becomes possible.",
+    "context": "The 'double coincidence of wants' is the core inefficiency of barter.",
+    "distractorNotes": "Money enables specialization rather than resulting from too much of it.",
+    "connection": "A universal medium of exchange makes complex economies possible.",
+    "related": [
+      "e025"
+    ]
+  },
+  {
+    "id": "e027",
+    "topic": "Economics",
+    "subtopic": "Economic Thought",
+    "difficulty": "medium",
+    "question": "Joseph Schumpeter's 'creative destruction' describes how innovation does what?",
+    "choices": [
+      "Preserves old industries",
+      "Replaces old products and firms with new ones",
+      "Halts economic growth",
+      "Eliminates all competition"
+    ],
+    "answerIndex": 1,
+    "explanation": "New technologies and firms continually displace obsolete ones; this churn destroys some jobs and companies but drives long-run growth and rising living standards.",
+    "context": "Joseph Schumpeter (1883–1950) coined the term in 1942.",
+    "distractorNotes": "It disrupts and replaces incumbents rather than protecting them.",
+    "connection": "It explains why dynamic economies see constant turnover of leading firms."
+  },
+  {
+    "id": "e028",
+    "topic": "Economics",
+    "subtopic": "Microeconomics",
+    "difficulty": "medium",
+    "question": "A price ceiling set below the market price (like rent control) tends to cause what?",
+    "choices": [
+      "A surplus",
+      "A shortage",
+      "No effect at all",
+      "Higher supply"
+    ],
+    "answerIndex": 1,
+    "explanation": "Holding price below equilibrium makes quantity demanded exceed quantity supplied, producing a persistent shortage, waiting lists, and often lower quality.",
+    "context": "A binding price ceiling is a legal cap below the market-clearing price.",
+    "distractorNotes": "Price floors create surpluses; ceilings create shortages.",
+    "connection": "It shows how overriding price signals creates imbalances.",
+    "connect": true,
+    "related": [
+      "e029"
+    ]
+  },
+  {
+    "id": "e029",
+    "topic": "Economics",
+    "subtopic": "Microeconomics",
+    "difficulty": "medium",
+    "question": "A price floor set above the market price (like some farm supports) tends to cause what?",
+    "choices": [
+      "A shortage",
+      "A surplus",
+      "Perfect equilibrium",
+      "Lower production"
+    ],
+    "answerIndex": 1,
+    "explanation": "Above equilibrium, quantity supplied exceeds quantity demanded, so unsold surpluses pile up — as with farm goods that governments then buy or store.",
+    "context": "A binding price floor is a minimum price set above the market-clearing level.",
+    "distractorNotes": "Ceilings cause shortages; floors cause surpluses — the mirror image.",
+    "connection": "Both illustrate the consequences of overriding market prices.",
+    "related": [
+      "e028",
+      "e071"
+    ]
+  },
+  {
+    "id": "e030",
+    "topic": "Economics",
+    "subtopic": "Microeconomics",
+    "difficulty": "medium",
+    "question": "Compared with perfect competition, a monopoly tends to do what?",
+    "choices": [
+      "Charge less and produce more",
+      "Charge more and produce less",
+      "Have no pricing power",
+      "Always operate illegally"
+    ],
+    "answerIndex": 1,
+    "explanation": "With no rivals, a monopolist restricts output to push price above marginal cost, capturing profit but leaving some mutually beneficial trades unmade (deadweight loss).",
+    "context": "Monopoly is a market structure with a single dominant seller.",
+    "distractorNotes": "Competition drives price toward cost; monopoly pulls it upward.",
+    "connection": "This is why governments regulate monopolies or enforce antitrust law.",
+    "connect": true,
+    "related": [
+      "e031"
+    ]
+  },
+  {
+    "id": "e031",
+    "topic": "Economics",
+    "subtopic": "Microeconomics",
+    "difficulty": "easy",
+    "question": "Increased competition among firms generally does what to prices and efficiency?",
+    "choices": [
+      "Raises prices and lowers efficiency",
+      "Lowers prices and pushes firms toward efficiency",
+      "Has no effect",
+      "Guarantees monopoly"
+    ],
+    "answerIndex": 1,
+    "explanation": "Rivalry forces firms to cut prices toward cost and to innovate to survive, benefiting consumers and weeding out inefficient producers.",
+    "context": "Perfect competition is an idealized benchmark of many small price-taking firms.",
+    "distractorNotes": "Competition lowers prices; it's monopoly that raises them.",
+    "connection": "Antitrust policy exists to preserve competitive pressure.",
+    "related": [
+      "e030"
+    ]
+  },
+  {
+    "id": "e032",
+    "topic": "Economics",
+    "subtopic": "Economic Thought",
+    "difficulty": "medium",
+    "question": "Adam Smith's 'invisible hand' describes how self-interested individuals in a market can do what?",
+    "choices": [
+      "Necessarily harm society",
+      "Unintentionally promote the general good",
+      "Eliminate all trade",
+      "Require central planning"
+    ],
+    "answerIndex": 1,
+    "explanation": "Pursuing profit, producers supply what people want at competitive prices; guided 'as if by an invisible hand,' private self-interest can yield socially beneficial outcomes.",
+    "context": "Adam Smith used the phrase in The Wealth of Nations (1776).",
+    "distractorNotes": "Smith's point is that central planning isn't required for order to emerge.",
+    "connection": "It's the classic argument for the efficiency of free markets.",
+    "connect": true,
+    "related": [
+      "e001",
+      "e007"
+    ]
+  },
+  {
+    "id": "e033",
+    "topic": "Economics",
+    "subtopic": "Economic Thought",
+    "difficulty": "medium",
+    "question": "Karl Marx argued that under capitalism, profit comes primarily from what?",
+    "choices": [
+      "Surplus value extracted from workers' labor",
+      "Government subsidies",
+      "Consumer generosity",
+      "Random luck"
+    ],
+    "answerIndex": 0,
+    "explanation": "Marx held that workers produce more value than they're paid in wages; capitalists keep the difference ('surplus value'), which he saw as the engine of class conflict.",
+    "context": "Karl Marx (1818–1883) laid this out in Das Kapital (1867).",
+    "distractorNotes": "In Marx's theory profit is unpaid labor, not a government transfer.",
+    "connection": "This critique underpinned later socialist and communist movements.",
+    "connect": true,
+    "related": [
+      "e032"
+    ]
+  },
+  {
+    "id": "e034",
+    "topic": "Economics",
+    "subtopic": "Economic Thought",
+    "difficulty": "medium",
+    "question": "Thomas Malthus warned that population growth tends to do what relative to the food supply?",
+    "choices": [
+      "Grow more slowly than it",
+      "Outstrip it, pushing living standards toward subsistence",
+      "Match it exactly",
+      "Shrink over time"
+    ],
+    "answerIndex": 1,
+    "explanation": "Malthus argued population grows geometrically while food grows arithmetically, so unchecked population would outrun food and be held down by famine, disease, or restraint.",
+    "context": "Thomas Malthus (1766–1834) published his Essay on the Principle of Population in 1798.",
+    "distractorNotes": "He feared population outpacing food — a fear later offset by unforeseen agricultural gains.",
+    "connection": "The Industrial and Green Revolutions defied his grim prediction.",
+    "related": [
+      "e066"
+    ]
+  },
+  {
+    "id": "e035",
+    "topic": "Economics",
+    "subtopic": "Trade",
+    "difficulty": "medium",
+    "question": "A tariff on imported goods mainly leads to what for domestic consumers?",
+    "choices": [
+      "Lower prices",
+      "Higher prices and less choice",
+      "More imports",
+      "No change at all"
+    ],
+    "answerIndex": 1,
+    "explanation": "A tariff raises the price of imports, letting domestic producers charge more too; consumers pay higher prices and buy less, even as protected industries gain.",
+    "context": "A tariff is simply a tax on imported goods.",
+    "distractorNotes": "Tariffs protect some producers but raise consumer prices — they don't lower them.",
+    "connection": "Free-trade arguments trace back to Ricardo's comparative advantage.",
+    "connect": true,
+    "related": [
+      "e003",
+      "e036"
+    ]
+  },
+  {
+    "id": "e036",
+    "topic": "Economics",
+    "subtopic": "Trade",
+    "difficulty": "easy",
+    "question": "Voluntary trade between two parties tends to do what?",
+    "choices": [
+      "Make one win and one lose equally",
+      "Make both parties better off",
+      "Destroy value overall",
+      "Only ever help the seller"
+    ],
+    "answerIndex": 1,
+    "explanation": "People trade only when each values what they get more than what they give up, so voluntary exchange creates value for both sides — it's positive-sum, not zero-sum.",
+    "context": "This 'gains from trade' insight is central to economics.",
+    "distractorNotes": "Trade isn't zero-sum; both sides expect to gain or they wouldn't agree.",
+    "connection": "The same logic scales up to gains from international trade.",
+    "related": [
+      "e035"
+    ]
+  },
+  {
+    "id": "e037",
+    "topic": "Economics",
+    "subtopic": "Behavioral Economics",
+    "difficulty": "medium",
+    "question": "The 'sunk cost fallacy' is the mistake of doing what?",
+    "choices": [
+      "Ignoring all future costs",
+      "Letting unrecoverable past costs drive current decisions",
+      "Always minimizing spending",
+      "Saving too much money"
+    ],
+    "answerIndex": 1,
+    "explanation": "Rational choice weighs only future costs and benefits; throwing more resources after unrecoverable 'sunk' costs just to justify them leads to worse outcomes.",
+    "context": "Sunk costs are past expenditures that can't be recovered.",
+    "distractorNotes": "The fallacy is over-weighting the past, not ignoring the future.",
+    "connection": "It's a key idea in behavioral economics.",
+    "related": [
+      "e038"
+    ]
+  },
+  {
+    "id": "e038",
+    "topic": "Economics",
+    "subtopic": "Behavioral Economics",
+    "difficulty": "medium",
+    "question": "Behavioral economics, associated with Daniel Kahneman, shows that people often do what?",
+    "choices": [
+      "Act with perfect rationality",
+      "Rely on biases and mental shortcuts that deviate from pure rationality",
+      "Never respond to incentives",
+      "Always maximize money"
+    ],
+    "answerIndex": 1,
+    "explanation": "Real decisions are shaped by heuristics and biases such as loss aversion and framing, so behavior systematically departs from the perfectly rational 'economic man' model.",
+    "context": "Psychologist Daniel Kahneman won the 2002 economics Nobel for this work.",
+    "distractorNotes": "The whole point is that people are predictably irrational, not perfectly rational.",
+    "connection": "It refined, rather than replaced, standard economic models.",
+    "related": [
+      "e037"
+    ]
+  },
+  {
+    "id": "e039",
+    "topic": "Economics",
+    "subtopic": "Market Failure",
+    "difficulty": "medium",
+    "question": "Moral hazard arises when a party is insulated from risk and therefore does what?",
+    "choices": [
+      "Takes more risk than they otherwise would",
+      "Becomes far more cautious",
+      "Saves much more",
+      "Works noticeably harder"
+    ],
+    "answerIndex": 0,
+    "explanation": "If someone else bears the downside — through insurance or a bailout — a person or firm has weaker incentive to be careful, so they take on extra risk.",
+    "context": "Moral hazard is central to insurance and financial regulation.",
+    "distractorNotes": "Being shielded from consequences encourages more risk-taking, not caution.",
+    "connection": "It's a major reason bank bailouts are controversial.",
+    "connect": true,
+    "related": [
+      "e011",
+      "e040"
+    ]
+  },
+  {
+    "id": "e040",
+    "topic": "Economics",
+    "subtopic": "Market Failure",
+    "difficulty": "hard",
+    "question": "Adverse selection, as in the 'market for lemons,' results from what?",
+    "choices": [
+      "Perfect information",
+      "Asymmetric information between buyers and sellers",
+      "Government price controls",
+      "Too much competition"
+    ],
+    "answerIndex": 1,
+    "explanation": "When sellers know more than buyers — say, about a used car's quality — buyers lower their offers, good products exit, and the market fills with 'lemons.'",
+    "context": "George Akerlof's 1970 'Market for Lemons' paper won a Nobel Prize.",
+    "distractorNotes": "The problem is unequal information, not price controls.",
+    "connection": "Warranties and certifications exist to reduce it.",
+    "related": [
+      "e039"
+    ]
+  },
+  {
+    "id": "e041",
+    "topic": "Economics",
+    "subtopic": "Game Theory",
+    "difficulty": "medium",
+    "question": "In a one-shot prisoner's dilemma, rational self-interest leads both players to do what?",
+    "choices": [
+      "Cooperate for the best joint outcome",
+      "Defect, producing a worse outcome for both",
+      "Split the difference",
+      "Refuse to play"
+    ],
+    "answerIndex": 1,
+    "explanation": "Each does better by defecting whatever the other does, so both defect — even though mutual cooperation would have left them both better off. Individual rationality yields a collectively worse result.",
+    "context": "The prisoner's dilemma is a foundational game in game theory.",
+    "distractorNotes": "Cooperation is the better joint outcome, but the incentives push toward defection.",
+    "connection": "It models arms races, price wars, and the tragedy of the commons.",
+    "connect": true,
+    "related": [
+      "e012",
+      "e042"
+    ]
+  },
+  {
+    "id": "e042",
+    "topic": "Economics",
+    "subtopic": "Game Theory",
+    "difficulty": "hard",
+    "question": "A Nash equilibrium is a situation in which each player does what?",
+    "choices": [
+      "Can improve by changing strategy alone",
+      "Has no incentive to change strategy given others' choices",
+      "Always cooperates fully",
+      "Acts completely at random"
+    ],
+    "answerIndex": 1,
+    "explanation": "At a Nash equilibrium no one can do better by unilaterally switching strategies, so the outcome is self-enforcing — though it need not be best for the group.",
+    "context": "Named for John Nash (1928–2015), a pioneer of game theory.",
+    "distractorNotes": "The defining feature is that no player can gain by deviating alone.",
+    "connection": "Mutual defection in the prisoner's dilemma is itself a Nash equilibrium.",
+    "connect": true,
+    "related": [
+      "e041"
+    ]
+  },
+  {
+    "id": "e043",
+    "topic": "Economics",
+    "subtopic": "Microeconomics",
+    "difficulty": "medium",
+    "question": "The law of diminishing returns says that adding more of one input while others stay fixed eventually does what?",
+    "choices": [
+      "Raises output at an accelerating rate",
+      "Yields smaller and smaller extra output",
+      "Stops all production",
+      "Lowers total cost"
+    ],
+    "answerIndex": 1,
+    "explanation": "With, say, land fixed, each extra worker eventually adds less than the one before because they have less capital or space to work with — a key limit on production.",
+    "context": "Diminishing marginal returns is a core idea in production theory.",
+    "distractorNotes": "Extra output shrinks per added input; it doesn't accelerate.",
+    "connection": "It differs from economies of scale, where all inputs grow together.",
+    "related": [
+      "e044"
+    ]
+  },
+  {
+    "id": "e044",
+    "topic": "Economics",
+    "subtopic": "Microeconomics",
+    "difficulty": "medium",
+    "question": "Economies of scale mean that as a firm produces more, its average cost per unit tends to do what?",
+    "choices": [
+      "Rise steadily",
+      "Fall",
+      "Stay exactly constant",
+      "Become infinite"
+    ],
+    "answerIndex": 1,
+    "explanation": "Spreading fixed costs over more units and gaining efficiencies lowers per-unit cost as output grows, giving large producers a cost advantage — up to a point.",
+    "context": "Economies of scale help explain why some industries are dominated by big firms.",
+    "distractorNotes": "Costs per unit fall with scale here; diseconomies set in only at very large sizes.",
+    "connection": "Large scale can create barriers to entry and even natural monopolies.",
+    "connect": true,
+    "related": [
+      "e030"
+    ]
+  },
+  {
+    "id": "e045",
+    "topic": "Economics",
+    "subtopic": "Growth",
+    "difficulty": "medium",
+    "question": "Thanks to compounding, a small difference in annual growth rates over decades leads to what?",
+    "choices": [
+      "Almost no difference",
+      "Very large differences in living standards",
+      "Immediate equality",
+      "Falling GDP"
+    ],
+    "answerIndex": 1,
+    "explanation": "Growth compounds like interest: an economy growing 3% a year doubles output in about 23 years, while 1% takes about 70 — small gaps become vast over a lifetime.",
+    "context": "The 'rule of 70' estimates doubling time by dividing 70 by the growth rate.",
+    "distractorNotes": "Compounding magnifies small differences rather than erasing them.",
+    "connection": "It's why economists obsess over long-run growth rates.",
+    "connect": true,
+    "related": [
+      "e046",
+      "e066"
+    ]
+  },
+  {
+    "id": "e046",
+    "topic": "Economics",
+    "subtopic": "Growth",
+    "difficulty": "medium",
+    "question": "Over the long run, rising living standards in a country depend mainly on growth in what?",
+    "choices": [
+      "Population size",
+      "Productivity (output per worker)",
+      "The money supply",
+      "Tariff rates"
+    ],
+    "answerIndex": 1,
+    "explanation": "A society can consume more per person only if it produces more per person; productivity growth — from technology, skills, and capital — is the ultimate driver of prosperity.",
+    "context": "Paul Krugman: 'Productivity isn't everything, but in the long run it is almost everything.'",
+    "distractorNotes": "Printing money or simply adding people doesn't by itself raise output per person.",
+    "connection": "Specialization and innovation are what boost productivity.",
+    "connect": true,
+    "related": [
+      "e001",
+      "e047"
+    ]
+  },
+  {
+    "id": "e047",
+    "topic": "Economics",
+    "subtopic": "Growth",
+    "difficulty": "medium",
+    "question": "Investment in 'human capital' refers to spending on what?",
+    "choices": [
+      "Factory machines",
+      "The education, skills, and health of workers",
+      "Government buildings",
+      "Foreign currency reserves"
+    ],
+    "answerIndex": 1,
+    "explanation": "Better-educated, healthier workers are more productive, so schooling and training raise future output and wages — treating skills as a form of capital.",
+    "context": "Gary Becker developed human-capital theory, winning a Nobel in 1992.",
+    "distractorNotes": "Machines are physical capital; human capital is embodied in people.",
+    "connection": "It links education policy directly to long-run growth.",
+    "related": [
+      "e046"
+    ]
+  },
+  {
+    "id": "e048",
+    "topic": "Economics",
+    "subtopic": "Macroeconomics",
+    "difficulty": "medium",
+    "question": "Deflation (falling prices) can be dangerous because it may lead consumers to do what?",
+    "choices": [
+      "Spend immediately",
+      "Delay purchases, deepening a downturn",
+      "Borrow heavily",
+      "Ignore prices entirely"
+    ],
+    "answerIndex": 1,
+    "explanation": "If prices are expected to keep falling, people postpone spending, which cuts demand, output, and jobs — and rising real debt burdens can worsen the spiral.",
+    "context": "Japan's 'Lost Decades' featured persistent mild deflation.",
+    "distractorNotes": "Deflation encourages waiting, not immediate spending.",
+    "connection": "Central banks usually target low positive inflation to avoid this.",
+    "related": [
+      "e015"
+    ]
+  },
+  {
+    "id": "e049",
+    "topic": "Economics",
+    "subtopic": "Macroeconomics",
+    "difficulty": "hard",
+    "question": "'Stagflation,' which puzzled economists in the 1970s, combines what two conditions?",
+    "choices": [
+      "High growth and low inflation",
+      "High inflation and high unemployment together",
+      "Deflation and a boom",
+      "Full employment and surplus"
+    ],
+    "answerIndex": 1,
+    "explanation": "Stagflation pairs stagnation — high unemployment and weak growth — with high inflation, a mix older Keynesian models struggled to explain and often blamed on supply shocks.",
+    "context": "The 1970s oil shocks produced stagflation across Western economies.",
+    "distractorNotes": "It's the uncomfortable mix of inflation AND unemployment, not a boom.",
+    "connection": "It undermined the idea of a stable inflation–unemployment trade-off.",
+    "connect": true,
+    "related": [
+      "e050"
+    ]
+  },
+  {
+    "id": "e050",
+    "topic": "Economics",
+    "subtopic": "Macroeconomics",
+    "difficulty": "medium",
+    "question": "The original Phillips curve suggested a short-run trade-off between inflation and what?",
+    "choices": [
+      "Unemployment",
+      "Trade deficits",
+      "Interest rates",
+      "Population growth"
+    ],
+    "answerIndex": 0,
+    "explanation": "It observed that lower unemployment tended to come with higher inflation and vice versa, implying policymakers faced a trade-off — though stagflation later complicated this.",
+    "context": "A.W. Phillips identified the relationship in 1958.",
+    "distractorNotes": "The classic trade-off is with unemployment, not trade deficits.",
+    "connection": "Stagflation in the 1970s undermined the simple version.",
+    "related": [
+      "e049"
+    ]
+  },
+  {
+    "id": "e051",
+    "topic": "Economics",
+    "subtopic": "Trade",
+    "difficulty": "medium",
+    "question": "A country has an absolute advantage in a good when it can produce that good using what?",
+    "choices": [
+      "Fewer resources than another country",
+      "A higher selling price",
+      "More tariffs",
+      "Less consumer demand"
+    ],
+    "answerIndex": 0,
+    "explanation": "Absolute advantage means producing more output from the same inputs. But comparative advantage — the lower opportunity cost — is what actually drives beneficial trade.",
+    "context": "Absolute advantage was Smith's idea; Ricardo added comparative advantage.",
+    "distractorNotes": "Absolute advantage is about resource efficiency, not price or tariffs.",
+    "connection": "Even without any absolute advantage, a country can still have a comparative advantage.",
+    "connect": true,
+    "related": [
+      "e003"
+    ]
+  },
+  {
+    "id": "e052",
+    "topic": "Economics",
+    "subtopic": "Microeconomics",
+    "difficulty": "hard",
+    "question": "A profit-maximizing firm should keep producing until which condition holds?",
+    "choices": [
+      "Marginal cost equals marginal revenue",
+      "Total cost falls to zero",
+      "Price equals zero",
+      "Output is maximized regardless of cost"
+    ],
+    "answerIndex": 0,
+    "explanation": "As long as an extra unit earns more than it costs, making it adds profit; the firm stops where marginal revenue equals marginal cost — the profit-maximizing output.",
+    "context": "This 'MR = MC' rule is a cornerstone of the theory of the firm.",
+    "distractorNotes": "Maximizing output isn't the goal — maximizing profit is.",
+    "connection": "Marginal thinking runs through nearly all economic decision-making.",
+    "related": [
+      "e010"
+    ]
+  },
+  {
+    "id": "e053",
+    "topic": "Economics",
+    "subtopic": "Microeconomics",
+    "difficulty": "medium",
+    "question": "Demand for a good with many close substitutes tends to be what?",
+    "choices": [
+      "Highly inelastic",
+      "Highly elastic",
+      "Perfectly fixed",
+      "Unaffected by price"
+    ],
+    "answerIndex": 1,
+    "explanation": "If substitutes abound, a price rise sends buyers to alternatives, so quantity demanded drops sharply — demand is elastic. Necessities with few substitutes are inelastic.",
+    "context": "Availability of substitutes is a key determinant of elasticity.",
+    "distractorNotes": "Substitutes make demand responsive (elastic), not fixed.",
+    "connection": "Elasticity shapes how price changes affect revenue.",
+    "related": [
+      "e009"
+    ]
+  },
+  {
+    "id": "e054",
+    "topic": "Economics",
+    "subtopic": "Growth",
+    "difficulty": "medium",
+    "question": "In classical growth models, higher savings can promote growth by enabling what?",
+    "choices": [
+      "More consumption today",
+      "More investment in productive capital",
+      "Higher taxes",
+      "Lower productivity"
+    ],
+    "answerIndex": 1,
+    "explanation": "Savings free up resources to invest in tools, machines, and infrastructure, raising future productive capacity — though excessive saving can also weaken current demand.",
+    "context": "The Solow model links capital accumulation to economic growth.",
+    "distractorNotes": "Saving means consuming less now to fund investment for the future.",
+    "connection": "It ties personal thrift to national capital formation.",
+    "related": [
+      "e046"
+    ]
+  },
+  {
+    "id": "e055",
+    "topic": "Economics",
+    "subtopic": "Money and Banking",
+    "difficulty": "medium",
+    "question": "Modern 'fiat money' has value primarily because of what?",
+    "choices": [
+      "Its backing by gold",
+      "Government decree plus shared confidence that others will accept it",
+      "Its industrial uses",
+      "Its natural scarcity"
+    ],
+    "answerIndex": 1,
+    "explanation": "Fiat money isn't backed by a commodity; it's accepted because the state makes it legal tender and everyone trusts it will be accepted — confidence sustains its value.",
+    "context": "Most countries left the gold standard during the 20th century.",
+    "distractorNotes": "Fiat money is deliberately not backed by gold or intrinsic worth.",
+    "connection": "Loss of that confidence is what makes hyperinflation so destructive.",
+    "related": [
+      "e016",
+      "e056"
+    ]
+  },
+  {
+    "id": "e056",
+    "topic": "Economics",
+    "subtopic": "Money and Banking",
+    "difficulty": "hard",
+    "question": "A gold standard tends to limit inflation but carries what drawback?",
+    "choices": [
+      "Unlimited money creation",
+      "It constrains a central bank's ability to respond to downturns",
+      "It guarantees full employment",
+      "It eliminates all trade"
+    ],
+    "answerIndex": 1,
+    "explanation": "Tying money to gold caps money growth and curbs inflation, but it also ties policymakers' hands, so they can't ease policy freely to fight recessions or deflation.",
+    "context": "Many economists argue the gold standard deepened the Great Depression.",
+    "distractorNotes": "The gold standard restricts, rather than enables, money creation.",
+    "connection": "This trade-off helped drive the shift to fiat money.",
+    "related": [
+      "e055"
+    ]
+  },
+  {
+    "id": "e057",
+    "topic": "Economics",
+    "subtopic": "Market Failure",
+    "difficulty": "hard",
+    "question": "The Coase theorem suggests that with clear property rights and low bargaining costs, externalities can be resolved how?",
+    "choices": [
+      "Only by government taxes",
+      "Through private negotiation between the parties",
+      "By banning the activity outright",
+      "By printing money"
+    ],
+    "answerIndex": 1,
+    "explanation": "If rights are well-defined and bargaining is cheap, the affected parties can negotiate an efficient outcome themselves, regardless of who initially holds the right.",
+    "context": "Ronald Coase argued this in 'The Problem of Social Cost' (1960).",
+    "distractorNotes": "Coase's insight is that private bargaining — not only taxes — can solve externalities.",
+    "connection": "It offers an alternative to Pigouvian taxes.",
+    "related": [
+      "e013"
+    ]
+  },
+  {
+    "id": "e058",
+    "topic": "Economics",
+    "subtopic": "Fiscal and Monetary Policy",
+    "difficulty": "easy",
+    "question": "A progressive tax system is one in which the tax rate does what as income rises?",
+    "choices": [
+      "Falls",
+      "Rises",
+      "Stays perfectly flat",
+      "Disappears"
+    ],
+    "answerIndex": 1,
+    "explanation": "Higher earners pay a larger share of income, which reduces after-tax inequality and raises revenue from those most able to pay — though critics warn about incentive effects.",
+    "context": "Most modern income-tax systems are progressive.",
+    "distractorNotes": "A regressive tax does the opposite; a flat tax keeps the rate constant.",
+    "connection": "Tax design constantly balances equity against work and investment incentives."
+  },
+  {
+    "id": "e059",
+    "topic": "Economics",
+    "subtopic": "Microeconomics",
+    "difficulty": "hard",
+    "question": "A tax on a good typically creates a 'deadweight loss,' meaning what?",
+    "choices": [
+      "Extra profit for the government",
+      "Lost mutually beneficial trades that no longer happen",
+      "Higher total output",
+      "Lower prices for buyers"
+    ],
+    "answerIndex": 1,
+    "explanation": "By driving a wedge between what buyers pay and sellers receive, a tax discourages some trades both sides valued, shrinking total surplus beyond the revenue raised.",
+    "context": "Deadweight loss measures the efficiency cost of a tax.",
+    "distractorNotes": "It's value destroyed by trades not made, not government profit.",
+    "connection": "This is why economists favor taxing inelastic goods, which distort less.",
+    "related": [
+      "e009",
+      "e073"
+    ]
+  },
+  {
+    "id": "e060",
+    "topic": "Economics",
+    "subtopic": "Trade",
+    "difficulty": "medium",
+    "question": "Complete this reasoning chain about trade: specialization → ___ → gains for both parties.",
+    "choices": [
+      "higher tariffs",
+      "exchange based on comparative advantage",
+      "central planning",
+      "autarky (self-sufficiency)"
+    ],
+    "answerIndex": 1,
+    "explanation": "Specialize according to comparative advantage, trade the surplus, and both parties end up with more than if each produced everything — the core logic of trade.",
+    "context": "This chain runs from Smith's division of labor to Ricardo's theory of trade.",
+    "distractorNotes": "Tariffs and autarky block the gains from trade rather than enabling them.",
+    "connection": "It underlies the entire economic case for open markets.",
+    "connect": true,
+    "related": [
+      "e002",
+      "e003"
+    ]
+  },
+  {
+    "id": "e061",
+    "topic": "Economics",
+    "subtopic": "Economic Thought",
+    "difficulty": "hard",
+    "question": "Say's Law is usually summarized as the claim that what?",
+    "choices": [
+      "Demand creates its own supply",
+      "Supply creates its own demand",
+      "Money causes recessions",
+      "Trade is zero-sum"
+    ],
+    "answerIndex": 1,
+    "explanation": "Jean-Baptiste Say argued that producing goods generates the income used to buy other goods, so general gluts shouldn't persist — a view Keynes later challenged.",
+    "context": "Jean-Baptiste Say (1767–1832) framed this early-19th-century idea.",
+    "distractorNotes": "The famous phrasing is 'supply creates its own demand.'",
+    "connection": "Keynes disputed it, arguing demand shortfalls can cause lasting unemployment.",
+    "connect": true,
+    "related": [
+      "e062"
+    ]
+  },
+  {
+    "id": "e062",
+    "topic": "Economics",
+    "subtopic": "Economic Thought",
+    "difficulty": "medium",
+    "question": "The key Keynesian break from classical economics was arguing that what can be persistently deficient?",
+    "choices": [
+      "The money supply",
+      "Aggregate demand",
+      "Population",
+      "Natural resources"
+    ],
+    "answerIndex": 1,
+    "explanation": "Keynes said total spending can fall short of what's needed for full employment and stay there, so economies can get stuck in slumps unless demand is boosted.",
+    "context": "This idea reframed macroeconomics after the Great Depression.",
+    "distractorNotes": "Classical economists assumed markets self-correct; Keynes doubted it for demand.",
+    "connection": "It's the reasoning behind active fiscal and monetary intervention.",
+    "related": [
+      "e020",
+      "e061"
+    ]
+  },
+  {
+    "id": "e063",
+    "topic": "Economics",
+    "subtopic": "Fiscal and Monetary Policy",
+    "difficulty": "medium",
+    "question": "The Keynesian 'multiplier' effect means an initial increase in spending leads to what?",
+    "choices": [
+      "An equal, one-time rise in income",
+      "A larger total rise in income as the money is re-spent",
+      "A fall in national income",
+      "No change at all"
+    ],
+    "answerIndex": 1,
+    "explanation": "One person's spending is another's income, which gets partly spent again, and so on — so an initial injection can raise total income by a multiple of itself.",
+    "context": "The multiplier's size depends on how much of extra income people spend.",
+    "distractorNotes": "The effect is amplified through rounds of re-spending, not a one-off.",
+    "connection": "It's a key rationale for fiscal stimulus.",
+    "connect": true,
+    "related": [
+      "e020"
+    ]
+  },
+  {
+    "id": "e064",
+    "topic": "Economics",
+    "subtopic": "Macroeconomics",
+    "difficulty": "hard",
+    "question": "The theory of rational expectations argues that people form expectations how?",
+    "choices": [
+      "Randomly",
+      "Using all available information, so they aren't systematically fooled",
+      "By ignoring the future",
+      "Only from the distant past"
+    ],
+    "answerIndex": 1,
+    "explanation": "If people anticipate the effects of policy — like predictable inflation — they adjust behavior in advance, which can blunt the policy's intended surprise effect.",
+    "context": "Robert Lucas advanced rational expectations, winning a 1995 Nobel.",
+    "distractorNotes": "The theory assumes people use information efficiently, not randomly.",
+    "connection": "It challenged the reliability of simple Keynesian fine-tuning."
+  },
+  {
+    "id": "e065",
+    "topic": "Economics",
+    "subtopic": "Microeconomics",
+    "difficulty": "easy",
+    "question": "The 'guns versus butter' model illustrates which core idea?",
+    "choices": [
+      "Inflation",
+      "The trade-off between competing uses of limited resources",
+      "The idea of a free lunch",
+      "Population growth"
+    ],
+    "answerIndex": 1,
+    "explanation": "A nation with finite resources must choose between military and civilian goods; more of one means less of the other — a vivid picture of opportunity cost and scarcity.",
+    "context": "The production possibilities frontier formalizes this trade-off.",
+    "distractorNotes": "It's about trade-offs, not money or inflation.",
+    "connection": "It's opportunity cost applied to a whole economy.",
+    "related": [
+      "e004",
+      "e005"
+    ]
+  },
+  {
+    "id": "e066",
+    "topic": "Economics",
+    "subtopic": "Growth",
+    "difficulty": "medium",
+    "question": "The Industrial Revolution marked the first time in history that economies achieved what?",
+    "choices": [
+      "Zero inequality",
+      "Sustained long-run growth in output per person",
+      "Complete self-sufficiency",
+      "The end of all trade"
+    ],
+    "answerIndex": 1,
+    "explanation": "Before around 1800, living standards were roughly flat for millennia; industrial technology unleashed continuous productivity growth that permanently raised incomes.",
+    "context": "This break is sometimes called the 'hockey stick' of economic history.",
+    "distractorNotes": "It raised average incomes but did not eliminate inequality.",
+    "connection": "Compounding growth ever since has transformed material life.",
+    "connect": true,
+    "related": [
+      "e045",
+      "e046"
+    ]
+  },
+  {
+    "id": "e067",
+    "topic": "Economics",
+    "subtopic": "Economic Thought",
+    "difficulty": "hard",
+    "question": "Adam Smith argued that the division of labor is ultimately limited by what?",
+    "choices": [
+      "The extent of the market",
+      "The weather",
+      "Workers' health",
+      "Interest rates"
+    ],
+    "answerIndex": 0,
+    "explanation": "Specialization pays only if you can sell the extra output, so bigger markets allow finer division of labor — which is why trade and transport spur productivity.",
+    "context": "This is one of Smith's key theorems in The Wealth of Nations.",
+    "distractorNotes": "The binding constraint Smith named is market size, not climate.",
+    "connection": "It ties the expansion of trade to deeper specialization and growth.",
+    "connect": true,
+    "related": [
+      "e001",
+      "e002"
+    ]
+  },
+  {
+    "id": "e068",
+    "topic": "Economics",
+    "subtopic": "Money and Banking",
+    "difficulty": "medium",
+    "question": "When market interest rates rise, the prices of existing fixed-rate bonds tend to do what?",
+    "choices": [
+      "Rise",
+      "Fall",
+      "Stay exactly the same",
+      "Double"
+    ],
+    "answerIndex": 1,
+    "explanation": "New bonds now pay more, so older bonds paying less must sell at a discount to compete — bond prices move inversely to interest rates.",
+    "context": "This inverse relationship is fundamental to fixed-income investing.",
+    "distractorNotes": "Bond prices fall, not rise, when rates go up.",
+    "connection": "It links central-bank rate moves to financial markets.",
+    "related": [
+      "e022"
+    ]
+  },
+  {
+    "id": "e069",
+    "topic": "Economics",
+    "subtopic": "Microeconomics",
+    "difficulty": "medium",
+    "question": "A government subsidy on a good tends to lead to what?",
+    "choices": [
+      "A higher price and less consumption",
+      "A lower price to consumers and more consumption",
+      "No change",
+      "A permanent shortage"
+    ],
+    "answerIndex": 1,
+    "explanation": "A subsidy lowers the effective price, so consumers buy more and producers supply more; it can correct positive externalities but may also cause overconsumption and fiscal cost.",
+    "context": "A subsidy is the mirror image of a tax in supply-and-demand analysis.",
+    "distractorNotes": "Subsidies push price down and quantity up, unlike a tax.",
+    "connection": "They're often used to encourage goods with positive externalities.",
+    "related": [
+      "e070"
+    ]
+  },
+  {
+    "id": "e070",
+    "topic": "Economics",
+    "subtopic": "Market Failure",
+    "difficulty": "medium",
+    "question": "A positive externality, like education or vaccination, tends to be what in a free market?",
+    "choices": [
+      "Overproduced",
+      "Underproduced relative to the social optimum",
+      "Legally banned",
+      "Completely unaffected"
+    ],
+    "answerIndex": 1,
+    "explanation": "Because some benefits spill over to others who don't pay, private buyers under-purchase from society's viewpoint, so the market provides too little without support.",
+    "context": "Positive externalities are a standard rationale for subsidies.",
+    "distractorNotes": "Negative externalities cause overproduction; positive ones cause underproduction.",
+    "connection": "Subsidies aim to push output toward the social optimum.",
+    "connect": true,
+    "related": [
+      "e013",
+      "e069"
+    ]
+  },
+  {
+    "id": "e071",
+    "topic": "Economics",
+    "subtopic": "Macroeconomics",
+    "difficulty": "medium",
+    "question": "Standard supply-and-demand analysis predicts a minimum wage set above the market wage can do what?",
+    "choices": [
+      "Eliminate every job",
+      "Raise pay for some workers while reducing employment for others",
+      "Lower wages across the board",
+      "Have guaranteed zero effect"
+    ],
+    "answerIndex": 1,
+    "explanation": "A binding wage floor raises incomes for those who keep their jobs but, in the basic model, reduces the number of jobs offered — a trade-off economists still debate empirically.",
+    "context": "A minimum wage is a price floor in the labor market.",
+    "distractorNotes": "The textbook effect is a trade-off, not the elimination of all jobs.",
+    "connection": "It's the labor-market version of a price floor.",
+    "related": [
+      "e029"
+    ]
+  },
+  {
+    "id": "e072",
+    "topic": "Economics",
+    "subtopic": "Fiscal and Monetary Policy",
+    "difficulty": "hard",
+    "question": "Central bank independence is thought to help mainly by doing what?",
+    "choices": [
+      "Guaranteeing high inflation",
+      "Insulating monetary policy from short-term political pressure",
+      "Eliminating recessions entirely",
+      "Setting national tax rates"
+    ],
+    "answerIndex": 1,
+    "explanation": "Politicians may be tempted to overheat the economy before elections, risking inflation; an independent central bank can commit more credibly to price stability.",
+    "context": "Many modern central banks are legally independent for exactly this reason.",
+    "distractorNotes": "Independence is meant to restrain, not guarantee, inflation.",
+    "connection": "It supports a credible low-inflation policy.",
+    "related": [
+      "e015",
+      "e021"
+    ]
+  },
+  {
+    "id": "e073",
+    "topic": "Economics",
+    "subtopic": "Microeconomics",
+    "difficulty": "medium",
+    "question": "Consumer surplus is the difference between what?",
+    "choices": [
+      "Price and the cost of production",
+      "What consumers are willing to pay and what they actually pay",
+      "Exports and imports",
+      "Taxes and subsidies"
+    ],
+    "answerIndex": 1,
+    "explanation": "When you'd have paid more than the market price, the gap is your surplus; summed across all buyers, it measures the benefit consumers get from a market.",
+    "context": "Consumer and producer surplus together measure total welfare in a market.",
+    "distractorNotes": "It's a buyer-side benefit, not a production-cost measure.",
+    "connection": "Taxes and monopolies shrink total surplus, creating deadweight loss.",
+    "related": [
+      "e059"
+    ]
+  },
+  {
+    "id": "e074",
+    "topic": "Economics",
+    "subtopic": "Money and Banking",
+    "difficulty": "medium",
+    "question": "Unexpected inflation tends to benefit which group?",
+    "choices": [
+      "Lenders and creditors",
+      "Borrowers and debtors",
+      "Savers holding cash",
+      "No one at all"
+    ],
+    "answerIndex": 1,
+    "explanation": "Inflation erodes the real value of fixed debts, so borrowers repay in cheaper money while lenders lose — one reason inflation redistributes wealth.",
+    "context": "This is why bondholders fear unexpected inflation.",
+    "distractorNotes": "Creditors are hurt, not helped, by surprise inflation.",
+    "connection": "It ties inflation directly to who wins and loses in an economy.",
+    "related": [
+      "e015"
+    ]
+  },
+  {
+    "id": "e075",
+    "topic": "Economics",
+    "subtopic": "Economic Thought",
+    "difficulty": "hard",
+    "question": "A key weakness of centrally planned economies, per critics like Hayek, is difficulty doing what?",
+    "choices": [
+      "Producing any goods at all",
+      "Gathering and using the dispersed information that prices normally convey",
+      "Employing any workers",
+      "Collecting taxes"
+    ],
+    "answerIndex": 1,
+    "explanation": "Without market prices, planners lack the signals about relative scarcity and preferences that emerge automatically in markets, leading to shortages, gluts, and misallocation.",
+    "context": "This 'knowledge problem' was central to the socialist calculation debate.",
+    "distractorNotes": "The core critique is informational, not an inability to produce anything.",
+    "connection": "It builds directly on Hayek's view of prices as information.",
+    "connect": true,
+    "related": [
+      "e007"
+    ]
   }
 ];

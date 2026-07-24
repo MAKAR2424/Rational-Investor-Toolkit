@@ -1,7 +1,7 @@
 # Atlas — a daily knowledge-training quiz
 
 Atlas is a distraction-free, single-page web app for building **broad general knowledge** in
-**History, Geography, and Philosophy**. It uses evidence-based learning mechanics — active recall,
+**History, Geography, Philosophy, and Economics**. It uses evidence-based learning mechanics — active recall,
 interleaving, spaced repetition, adaptive difficulty, and weak-spot targeting — with everything
 running locally in your browser. No backend, no accounts, no network calls. Your progress lives in
 `localStorage`.
@@ -80,7 +80,7 @@ your recorded answer and stats don't change), then jump forward again.
 | Mechanic | What Atlas does |
 |---|---|
 | **Active recall** | Options are hidden until you press *Reveal* — you attempt the answer from memory first. |
-| **Interleaving** | Never two questions from the same topic back to back; History / Geography / Philosophy are shuffled throughout. |
+| **Interleaving** | Never two questions from the same topic back to back; History / Geography / Philosophy / Economics are shuffled throughout. |
 | **Spaced repetition** | SM-2-style intervals. Wrong → 1 day; correct after a wrong → 3 days; then 7, 16, 35. A correct-on-first-sight question jumps to ~14 days. Missed questions never re-appear in the same session. |
 | **Adaptive difficulty** | Rolling accuracy over your last 10 answers: above ~80% weights the session harder, below ~50% weights it easier, otherwise mixed. |
 | **Weak-spot weighting** | Per-subtopic accuracy is tracked; subtopics below your average accuracy get oversampled. |
@@ -109,11 +109,13 @@ after editing, see "Keeping the two files in sync" below.
 
 ---
 
-## The question bank (~300 starter questions)
+## The question bank (~375 starter questions)
 
-The bank ships with ~300 questions split roughly evenly across History, Geography, and Philosophy,
-tagged by subtopic and difficulty, with ~15% "connect the dots" questions (chronological ordering,
-causal links, and influence chains).
+The bank ships with ~375 questions across History (101), Geography (100), Philosophy (100), and
+Economics (75), tagged by subtopic and difficulty, with "connect the dots" questions for
+chronological ordering, causal links, and influence chains. The Economics branch leans into that
+style deliberately — most questions ask what a concept (division of labor, comparative advantage,
+inflation, externalities…) *leads to*, with the explanation laying out the chain of reasoning.
 
 ### Schema for each question
 
@@ -141,8 +143,8 @@ causal links, and influence chains).
 
 | Field | Required | Notes |
 |---|---|---|
-| `id` | ✅ | Unique string. Convention: `h###` History, `g###` Geography, `p###` Philosophy. |
-| `topic` | ✅ | Exactly one of `"History"`, `"Geography"`, `"Philosophy"`. |
+| `id` | ✅ | Unique string. Convention: `h###` History, `g###` Geography, `p###` Philosophy, `e###` Economics. |
+| `topic` | ✅ | Exactly one of `"History"`, `"Geography"`, `"Philosophy"`, `"Economics"`. To add a new top-level topic, also add it to the `TOPICS` array in `app.js`. |
 | `subtopic` | ✅ | Free-form, e.g. `"Ancient Rome"`, `"Physical Geography"`, `"Ethics"`. Used for weak-spot tracking, so reuse existing spellings to group questions. |
 | `difficulty` | ✅ | One of `"easy"`, `"medium"`, `"hard"`. |
 | `question` | ✅ | The prompt shown during active recall. |
