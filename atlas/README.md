@@ -33,6 +33,23 @@ so the app falls back to the bundled copy automatically).
 
 Either way, the app is fully functional and self-contained.
 
+### Option C — on your phone
+
+The app is just static files, so any of these work on a phone:
+
+- **Self-host with GitHub Pages (permanent, recommended):** in your repo, go to
+  **Settings → Pages**, set the source to your branch, and once it publishes, open
+  `https://<your-username>.github.io/<repo>/atlas/` on your phone. It's your own URL, works on
+  any device, and your progress saves per-device in the browser.
+- **Single portable file:** `atlas/atlas.html` is the entire app bundled into one file (HTML, CSS,
+  JS, and all questions inlined). Email/AirDrop it to yourself and open it in your phone's browser —
+  no server, fully offline. Regenerate it after editing questions with the snippet in
+  "Keeping files in sync" below.
+- **Any static host:** drop the `atlas/` folder onto Netlify, Vercel, Cloudflare Pages, etc.
+
+Because there's no backend, progress on your phone is separate from your desktop. Use
+**Export / Import** in Settings to move a backup between devices.
+
 ---
 
 ## How to use it
@@ -76,6 +93,7 @@ atlas/
 ├── app.js          # All logic: state, scheduling, session flow, stats, import/export
 ├── questions.json  # The question bank — human-readable, edit this to add questions
 ├── questions.js    # Auto-generated mirror of questions.json (for the file:// fallback)
+├── atlas.html      # Auto-generated: the whole app bundled into one portable file
 └── README.md       # This file
 ```
 
@@ -158,6 +176,12 @@ printf 'window.ATLAS_QUESTIONS = ' > questions.js && cat questions.json >> quest
 ```
 
 If you always run via the local server (Option A), you can ignore `questions.js` entirely.
+
+To also refresh the single-file `atlas.html` after editing questions, run from inside `atlas/`:
+
+```bash
+node -e "const f=require('fs'),c=f.readFileSync('styles.css','utf8'),a=f.readFileSync('app.js','utf8'),q=f.readFileSync('questions.json','utf8'),h=f.readFileSync('index.html','utf8');const body=h.replace(/[\s\S]*<body>/,'').replace(/<\/body>[\s\S]*/,'').replace(/<script src=\"app.js\"><\/script>/,'');f.writeFileSync('atlas.html','<!doctype html>\n<html lang=\"en\" data-theme=\"dark\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,viewport-fit=cover\"><title>Atlas</title><style>'+c+'</style></head><body>'+body+'<script>window.ATLAS_QUESTIONS='+q+';</script><script>'+a+'</script></body></html>');"
+```
 
 ---
 
