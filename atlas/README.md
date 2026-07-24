@@ -1,0 +1,169 @@
+# Atlas — a daily knowledge-training quiz
+
+Atlas is a distraction-free, single-page web app for building **broad general knowledge** in
+**History, Geography, and Philosophy**. It uses evidence-based learning mechanics — active recall,
+interleaving, spaced repetition, adaptive difficulty, and weak-spot targeting — with everything
+running locally in your browser. No backend, no accounts, no network calls. Your progress lives in
+`localStorage`.
+
+---
+
+## How to run it
+
+You have two options.
+
+### Option A — one command (recommended)
+
+Any static file server works. From inside the `atlas/` folder:
+
+```bash
+cd atlas
+python3 -m http.server 8000
+```
+
+Then open **http://localhost:8000** in your browser.
+
+(If you prefer Node: `npx serve` or `npx http-server` from the `atlas/` folder does the same.)
+
+### Option B — just open the file
+
+Double-click **`atlas/index.html`**. It works offline with no server, because the question bank is
+also bundled as `questions.js` for the `file://` case (browsers block `fetch()` of local JSON files,
+so the app falls back to the bundled copy automatically).
+
+Either way, the app is fully functional and self-contained.
+
+---
+
+## How to use it
+
+- **Home** → pick a session length (10 / 15 / 25) and press **Start**.
+- Each question shows **the prompt first, with the options hidden**. Think of your answer, then
+  **Reveal options**, pick one, and read the feedback (explanation, distractor note, connection).
+- Finish the session for a score, streak update, per-topic breakdown, a review list, and a
+  "what you learned today" recap.
+- **Stats** shows your streak, accuracy trend, and strongest/weakest subtopics.
+- **Settings** has theme, default session length, and **Export / Import / Reset** for your data.
+- Once a week, if you've missed questions, a **Weekly review** banner appears on Home — a short
+  session drawn only from what you got wrong in the last 7 days.
+
+### Keyboard shortcuts
+- **Space** — reveal the options
+- **1–4** — select an answer
+- **Enter** — continue to the next question
+
+---
+
+## The learning mechanics
+
+| Mechanic | What Atlas does |
+|---|---|
+| **Active recall** | Options are hidden until you press *Reveal* — you attempt the answer from memory first. |
+| **Interleaving** | Never two questions from the same topic back to back; History / Geography / Philosophy are shuffled throughout. |
+| **Spaced repetition** | SM-2-style intervals. Wrong → 1 day; correct after a wrong → 3 days; then 7, 16, 35. A correct-on-first-sight question jumps to ~14 days. Missed questions never re-appear in the same session. |
+| **Adaptive difficulty** | Rolling accuracy over your last 10 answers: above ~80% weights the session harder, below ~50% weights it easier, otherwise mixed. |
+| **Weak-spot weighting** | Per-subtopic accuracy is tracked; subtopics below your average accuracy get oversampled. |
+| **Weekly review** | A separate ~10-question session drawn only from questions missed in the last 7 days, prompted once a week. |
+
+---
+
+## File structure
+
+```
+atlas/
+├── index.html      # App shell (nav, theme, mounts the views)
+├── styles.css      # All styling; dark mode default, light mode toggle
+├── app.js          # All logic: state, scheduling, session flow, stats, import/export
+├── questions.json  # The question bank — human-readable, edit this to add questions
+├── questions.js    # Auto-generated mirror of questions.json (for the file:// fallback)
+└── README.md       # This file
+```
+
+**You edit `questions.json`.** `questions.js` is just `window.ATLAS_QUESTIONS = <contents of
+questions.json>` so the app can run by double-clicking. If you run via a local server (Option A),
+`questions.json` is loaded directly and `questions.js` is ignored — so for quick edits, use the
+server and you don't need to touch `questions.js` at all. To keep the double-click path in sync
+after editing, see "Keeping the two files in sync" below.
+
+---
+
+## The question bank (~300 starter questions)
+
+The bank ships with ~300 questions split roughly evenly across History, Geography, and Philosophy,
+tagged by subtopic and difficulty, with ~15% "connect the dots" questions (chronological ordering,
+causal links, and influence chains).
+
+### Schema for each question
+
+`questions.json` is a single JSON array of objects. Each object looks like this:
+
+```json
+{
+  "id": "h001",
+  "topic": "History",
+  "subtopic": "Ancient Egypt",
+  "difficulty": "medium",
+  "question": "What was the primary purpose of the Great Pyramid of Giza?",
+  "choices": ["A royal palace", "A tomb for a pharaoh", "A grain storehouse", "An observatory"],
+  "answerIndex": 1,
+  "explanation": "The Great Pyramid was built around 2560 BCE as a monumental tomb for Khufu.",
+  "distractorNotes": "It aligns to cardinal directions, but 'observatory' is a modern myth.",
+  "connection": "Part of the same Old Kingdom pyramid-building tradition centered on Memphis.",
+  "connect": true,
+  "related": ["h002", "h003"]
+}
+```
+
+### Field reference
+
+| Field | Required | Notes |
+|---|---|---|
+| `id` | ✅ | Unique string. Convention: `h###` History, `g###` Geography, `p###` Philosophy. |
+| `topic` | ✅ | Exactly one of `"History"`, `"Geography"`, `"Philosophy"`. |
+| `subtopic` | ✅ | Free-form, e.g. `"Ancient Rome"`, `"Physical Geography"`, `"Ethics"`. Used for weak-spot tracking, so reuse existing spellings to group questions. |
+| `difficulty` | ✅ | One of `"easy"`, `"medium"`, `"hard"`. |
+| `question` | ✅ | The prompt shown during active recall. |
+| `choices` | ✅ | Array of **exactly 4** distinct strings. |
+| `answerIndex` | ✅ | Integer `0–3` — the index of the correct choice. |
+| `explanation` | ✅ | 1–2 punchy sentences on *why* the answer is right. |
+| `distractorNotes` | ✅ | Short note on why the most tempting wrong answer is wrong. |
+| `connection` | optional | One sentence linking the fact to another idea/era/person. Shown as "Connection" in feedback. |
+| `connect` | optional | `true` marks a "connect the dots" question (adds a chip and boosts it in the recap). Use for ordering / causal / influence questions. |
+| `related` | optional | Array of other question `id`s this one connects to. |
+
+### Adding your own questions
+
+1. Open `questions.json`.
+2. Copy an existing object, paste it as a new entry in the array, and edit the fields.
+3. Give it a **unique `id`** and make sure `choices` has **exactly 4** options with the right
+   `answerIndex`.
+4. Save. If you're running via a local server, just refresh the page — done.
+
+**Accuracy matters more than volume.** Prefer well-established, verifiable facts. If you're unsure
+of a detail, pick a different question.
+
+### Keeping the two files in sync (only needed for the double-click path)
+
+If you edit `questions.json` and want the **double-click / `file://`** path to reflect it, regenerate
+`questions.js`. Any of these works from inside `atlas/`:
+
+```bash
+# Node
+node -e "const q=require('fs').readFileSync('questions.json','utf8'); require('fs').writeFileSync('questions.js','window.ATLAS_QUESTIONS = '+q+';')"
+```
+
+```bash
+# or plain shell
+printf 'window.ATLAS_QUESTIONS = ' > questions.js && cat questions.json >> questions.js && printf ';' >> questions.js
+```
+
+If you always run via the local server (Option A), you can ignore `questions.js` entirely.
+
+---
+
+## Your data
+
+- Everything is stored under the `atlas.state.v1` key in your browser's `localStorage`.
+- **Export progress** downloads a JSON backup. **Import progress** restores one. **Reset** clears
+  everything (with a confirmation).
+- Clearing your browser data for this site will also wipe progress — export first if you care.
